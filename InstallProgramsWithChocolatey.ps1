@@ -56,8 +56,8 @@ If (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
 # Installation Chocolatey
 if (!(Get-Command choco.exe  -ErrorAction SilentlyContinue)) {
     write-host "Chololatey n'est pas installé... Lancement de l'installation"
-    #Set-ExecutionPolicy Bypass -Scope Process -Force
-    #iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    Set-ExecutionPolicy Bypass -Scope Process -Force
+    iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 } else {
     write-host "Chocolatey est installé, on peut poursuivre"
 }
